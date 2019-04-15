@@ -67,12 +67,12 @@ body {
  */
 
 [role="main"] {
-  padding-top: 133px; /* Space for fixed navbar */
+  padding-top: 9rem; /* Space for fixed navbar */
 }
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 90px; /* Space for fixed navbar */
+    padding-top: 9rem; /* Space for fixed navbar */
   }
 }
 
