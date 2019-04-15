@@ -15,6 +15,9 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
+
+    @*<link href="https://fonts.googleapis.com/css?family=Anton|Teko" rel="stylesheet">*@
+
     <link rel="stylesheet" href="~/css/site.css" />
     <!--link rel="stylesheet" href="~/css/dashboard.css" /-->
     <link rel="stylesheet" href="~/css/style.css" />
@@ -23,7 +26,7 @@
     <header class="fixed-top">
         <nav id="site-header" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AFS</a>
+                <a class="navbar-brand afslogo-font" asp-area="" asp-controller="Home" asp-action="Index">afs<sup>&#174;</sup><sub>The market leader in lending solutions</sub></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -70,12 +73,7 @@
     </header>
         <div class="wrapper">
             <nav id="sidebar">
-                <div class="sidebar-header">
-                    <h3>Bootstrap Sidebar</h3>
-                </div>
-
                 <ul class="list-unstyled components">
-                    <p>Dummy Heading</p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -112,15 +110,6 @@
                     </li>
                     <li>
                         <a href="#">Contact</a>
-                    </li>
-                </ul>
-
-                <ul class="list-unstyled CTAs">
-                    <li>
-                        <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-                    </li>
-                    <li>
-                        <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
                     </li>
                 </ul>
             </nav>

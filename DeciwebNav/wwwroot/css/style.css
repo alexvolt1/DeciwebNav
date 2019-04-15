@@ -21,7 +21,7 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
+    /*padding: 15px 10px;*/
     background: #fff;
     border: none;
     border-radius: 0;
@@ -57,38 +57,37 @@ a:focus {
     max-width: 250px;
     background: rgba(0, 0, 0, 0.05);
     color: grey;
-    margin-top:6.4rem;
+    margin-top: 6.4rem;
 }
 
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-    #sidebar ul li a:hover {
-        color: #212529;
-        background: #fff;
+    #sidebar.active {
+        margin-left: -250px;
     }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #343a40;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+        #sidebar ul li a:hover {
+            color: #212529;
+            background: #fff;
+        }
 
     #sidebar ul li.active > a,
     a[aria-expanded="true"] {
@@ -111,20 +110,20 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #dadbe0;
 }
 
 ul.CTAs {
     padding: 20px;
 }
 
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
 
 a.download {
     background: #fff;
@@ -150,8 +149,53 @@ a.article:hover {
 
 #sidebarCollapse {
     line-height: 1;
-    padding:0 0.2rem 0 0.2rem;
-    margin-right:1rem;
+    padding: 0 0.2rem 0 0.2rem;
+    margin-right: 1rem;
+}
+
+/* ---------------------------------------------------
+    FONTS
+----------------------------------------------------- */
+.afslogo-font {
+    font-family: 'Anton', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.bbtlogo-font {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: 4px 4px 4px #171718;
+    background: #770526;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+    .afslogo-font sup {
+        font-size: 1.5rem;
+        vertical-align: super;
+        left:0.7rem;
+    }
+
+    .afslogo-font sub {
+        font-family: 'Teko', serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+_:-ms-lang(x), .afslogo-font sup {
+    top: 0.1rem;
+}
+@supports (-ms-ime-align:auto) {
+    .afslogo-font sup {
+        top: 0.1rem;
+    }
 }
 
 
@@ -163,9 +207,10 @@ a.article:hover {
     #sidebar {
         margin-left: -250px;
     }
-    #sidebar.active {
-        margin-left: 0;
-    }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
 
     #sidebarCollapse span {
         display: none;
