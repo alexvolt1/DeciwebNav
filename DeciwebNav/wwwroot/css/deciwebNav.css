@@ -11728,7 +11728,7 @@ a.article:hover {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.2rem;
     text-shadow: 4px 4px 4px #171718;
     background: #770526;
     padding-left: 1rem;
@@ -11780,8 +11780,18 @@ _:-ms-lang(x), .afslogo-font sup {
 header {
     line-height: 1;
 }
-    header #site-header {
+    header #site-header,
+    header #site-header a.navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
     }
+
+#global-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#global-nav span {
+    font-size:1rem;
+    color:#fff;
+}
 
