@@ -11320,7 +11320,6 @@ body {
 @media (min-width: 768px) {
     .sidebar {
         width: 225px !important;
-        -webkit-transition-duration: 0.8s;
     }
 
         .sidebar .nav-item .nav-link {
@@ -11348,8 +11347,7 @@ body {
 
         .sidebar.toggled {
             overflow: visible;
-            /*width: 90px !important;*/
-            -webkit-transition-duration: 0.8s;
+            width: 90px !important;
         }
 
             .sidebar.toggled .nav-item:last-child {

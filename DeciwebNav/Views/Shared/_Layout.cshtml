@@ -22,18 +22,21 @@
     </environment>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Anton|Teko" rel="stylesheet">
+    @*<link href="https://fonts.googleapis.com/css?family=Anton|Teko" rel="stylesheet">*@
 
-    @*
-        <link rel="stylesheet" href="~/css/site.css" />*@
-    <!--link rel="stylesheet" href="~/css/dashboard.css" /-->
 
-    <link rel="stylesheet" href="~/css/deciwebNav.css" />
+
+    @*<link rel="stylesheet" href="~/css/dashboard.css" />*@
+    @*<link rel="stylesheet" href="~/css/deciwebNav.css" />*@
 
 
     @*<link rel="stylesheet" href="~/css/style.css" />*@
 
     @*<link href="~/css/simple-sidebar.css" rel="stylesheet">*@
+
+    <link rel="stylesheet" href="~/css/sb-admin.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
 
 
 </head>
@@ -60,65 +63,95 @@
             </div>
         </nav>
 
-        <nav id="global-nav" class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-            <span>Toggle Sidebar</span>
-
+        <nav id="global-nav" class="navbar navbar-expand-md navbar-dark bg-dark">
+            <span class="toggle-title">Toggle Sidebar</span>
             <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
                 <i class="fas fa-bars"></i>
             </button>
-            <!-- Navbar -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item"><a class="nav-link" asp-action="OrderHistory" asp-controller="Order">Order History</a> </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Categories" asp-action="Index">Category</a>
+                            <a class="dropdown-item" asp-controller="SubCategories" asp-action="Index">Camp</a>
+                            <a class="dropdown-item" asp-controller="AvailWeeks" asp-action="Index">Avail Week</a>
+                            <a class="dropdown-item" asp-controller="Coupons" asp-action="Index">Coupons</a>
+                            <a class="dropdown-item" asp-controller="Users" asp-action="Index">Users</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Order
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-action="ManageOrder" asp-controller="Order">Manage Order</a>
+                            <a class="dropdown-item" asp-action="OrderPickup" asp-controller="Order">Order Pickup</a>
+                            <a asp-controller="Order" asp-action="OrderSummaryExport" class="dropdown-item">Download Order Details</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+
+
         </nav>
 
 
     </header>
     <div id="wrapper">
-        <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="list-group list-group-flush">
-                <ul class="sidebar navbar-nav">
-                    @*<li class="nav-item active">
-                        <a class="nav-link" href="index.html">
-                            <i class="fas fa-fw fa-tachometer-alt"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>*@
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-fw fa-folder"></i>
-                            <span>Pages</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                            <h6 class="dropdown-header">Login Screens:</h6>
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="register.html">Register</a>
-                            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Other Pages:</h6>
-                            <a class="dropdown-item" href="404.html">404 Page</a>
-                            <a class="dropdown-item" href="blank.html">Blank Page</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="charts.html">
-                            <i class="fas fa-fw fa-chart-area"></i>
-                            <span>Charts</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tables.html">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Tables</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /Sidebar -->
-        <div id="content-wrapper">
 
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Login Screens:</h6>
+                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="register.html">Register</a>
+                    <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Other Pages:</h6>
+                    <a class="dropdown-item" href="404.html">404 Page</a>
+                    <a class="dropdown-item" href="blank.html">Blank Page</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="content-wrapper">
             @RenderBody()
 
+            <!-- /.container-fluid -->
             <!-- Sticky Footer -->
             <footer class="sticky-footer">
                 <div class="container my-auto">
@@ -133,16 +166,41 @@
 
     </div>
     <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <environment include="Development">
-        <script src="~/js/sb-admin.js"></script>
+
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <script src="~/lib/jquery-easing/jquery.easing.js"></script>
         <script src="~/lib/chart.js/Chart.js"></script>
         <script src="~/lib/DataTables/DataTables-1.10.18/js/jquery.dataTables.js"></script>
         <script src="~/lib/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.js"></script>
+
+        <script src="~/js/sb-admin.js"></script>
+
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -157,22 +215,23 @@
                 crossorigin="anonymous"
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
-        <script src="~/js/sb-admin.min.js"></script>
+
         <script src="~/lib/jquery-easing/jquery.easing.min.js"></script>
         <script src="~/lib/chart.js/Chart.min.js"></script>
         <script src="~/lib/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
         <script src="~/lib/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/js/sb-admin.min.js"></script>
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
 
     <script src="~/js/datatables.js"></script>
     <script src="~/js/chart-area.js"></script>
-    <script>
-        $("#sidebarToggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
+    @*<script>
+            $("#sidebarToggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>*@
 
     @RenderSection("Scripts", required: false)
 </body>

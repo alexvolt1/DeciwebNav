@@ -10537,9 +10537,10 @@ body {
 }
 
 @media (min-width: 768px) {
-  .sidebar {
-    width: 225px !important;
-  }
+    .sidebar {
+        width: 225px !important;
+        -webkit-transition-duration: 0.8s;
+    }
   .sidebar .nav-item .nav-link {
     display: block;
     width: 100%;
@@ -10559,10 +10560,11 @@ body {
   .sidebar .nav-item.dropdown .dropdown-toggle::after {
     display: block;
   }
-  .sidebar.toggled {
-    overflow: visible;
-    width: 90px !important;
-  }
+    .sidebar.toggled {
+        overflow: visible;
+        /*width: 90px !important;*/
+        -webkit-transition-duration: 0.8s;
+    }
   .sidebar.toggled .nav-item:last-child {
     margin-bottom: 1rem;
   }
