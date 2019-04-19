@@ -377,4 +377,40 @@ header {
         font-size: 1rem;
         color: #fff;
     }
-    
+
+.sidebar .sidebar-heading {
+    color: rgba(255,255,255,.4);
+}
+
+@media (min-width: 768px) {
+    .sidebar .sidebar-heading {
+        text-align: left;
+    }
+}
+
+.sidebar .sidebar-heading {
+    text-align: left;
+    padding: 1rem 1rem 0 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading, .text-uppercase {
+    /*text-transform: uppercase !important;*/
+}
+
+.sidebar .nav-item .nav-link {
+    padding-top: 0.2rem;
+    padding-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.sidebar .nav-item .nav-link span {
+    font-size: 0.8rem;
+}
+
+.sidebar .nav-item .dropdown-menu .dropdown-item {
+    padding-top: 0.2rem;
+    padding-bottom: 0;
+    font-size: 0.8rem;
+}

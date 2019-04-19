@@ -53,10 +53,7 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h3>Application Title</h3></a>
                         </li>
                     </ul>
                 </div>
@@ -71,9 +68,7 @@
             </button>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-
                     <li class="nav-item"><a class="nav-link" asp-action="OrderHistory" asp-controller="Order">Order History</a> </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Admin
@@ -99,6 +94,70 @@
 
 
                 </ul>
+                <ul class="navbar-nav ml-auto ml-md-0">
+
+                    <li class="nav-item dropdown mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bookmarks
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Categories" asp-action="Index">Category</a>
+                            <a class="dropdown-item" asp-controller="SubCategories" asp-action="Index">Camp</a>
+                            <a class="dropdown-item" asp-controller="AvailWeeks" asp-action="Index">Avail Week</a>
+                            <a class="dropdown-item" asp-controller="Coupons" asp-action="Index">Coupons</a>
+                            <a class="dropdown-item" asp-controller="Users" asp-action="Index">Users</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Recents
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Categories" asp-action="Index">Category</a>
+                            <a class="dropdown-item" asp-controller="SubCategories" asp-action="Index">Camp</a>
+                            <a class="dropdown-item" asp-controller="AvailWeeks" asp-action="Index">Avail Week</a>
+                            <a class="dropdown-item" asp-controller="Coupons" asp-action="Index">Coupons</a>
+                            <a class="dropdown-item" asp-controller="Users" asp-action="Index">Users</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <span class="badge badge-danger">9+</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <span class="badge badge-danger">7</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle fa-fw"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Activity Log</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
 
@@ -112,28 +171,192 @@
 
         <!-- Sidebar -->
         <ul class="sidebar navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+            <li class="nav-item dropdown">
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Portfolio Analysis Tools
+                </div>
+
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Business Development</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Loan Outstanding Growth</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Facility Usage Levels</a>
+                    <a class="dropdown-item" href="#">Maid and Paid</a>
+                    <a class="dropdown-item" href="#">Exposure Growth</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pricing Yield</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Risk-Adjusted Rate</a>
+                    <a class="dropdown-item" href="#">Risk-Adjusted Rate Variance</a>
+                    <a class="dropdown-item" href="#">Highest / Lowest Rates</a>
+                    <a class="dropdown-item" href="#">Fee Contribution to All-In Rate</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pricing Fees</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Fee Mix</a>
+                    <a class="dropdown-item" href="#">Facility Fee Level</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Comparable Deals</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Comparable Deals (Facilities)</a>
+                    <a class="dropdown-item" href="#">Comparable Deals (Loans)</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Inventory</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Obligor List</a>
+                    <a class="dropdown-item" href="#">Credit Products by Obligor</a>
+                    <a class="dropdown-item" href="#">Largest Obligors by Exposure</a>
+                    <a class="dropdown-item" href="#">Largest Obligors by Loan Size</a>
+                    <a class="dropdown-item" href="#">Industry Groupings</a>
+                    <a class="dropdown-item" href="#">Highest Level Facilities</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Credit Risk Monitoring</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Risk Rating Trend - Loan Outstandings</a>
+                    <a class="dropdown-item" href="#">Risk Rating Trend - Facility Exposure</a>
+                    <a class="dropdown-item" href="#">Risk Concentration - Loan Outstandings</a>
+                    <a class="dropdown-item" href="#">Risk Concentration - Facility Exposure</a>
+                    <a class="dropdown-item" href="#">Risk Rating Upgrades/Downgrades (Facilities)</a>
+                    <a class="dropdown-item" href="#">Risk Rating Upgrades/Downgrades (Loans)</a>
+                    <a class="dropdown-item" href="#">Delinquency Levels</a>
+                    <a class="dropdown-item" href="#">Delinquency Obligors</a>
+                </div>
+            </li>
+
+            <li>
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Credit Pipeline Reporting
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Application Value & Volume</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Application Value & Volume by Status</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Application Value & Volume by Organization</a>
+                    <a class="dropdown-item" href="#">Application Value & Volume by Industry</a>
+                    <a class="dropdown-item" href="#">Application Value & Volume by Geography</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Application Composition</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Application Composition by Organization</a>
+                    <a class="dropdown-item" href="#">Application Composition by Industry</a>
+                    <a class="dropdown-item" href="#">Application Composition by Geography</a>
+                    <a class="dropdown-item" href="#">Active Unit Query</a>
+                    <a class="dropdown-item" href="#">In Process Events</a>
+                    <a class="dropdown-item" href="#">Completed Events</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Turnaround Time</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Application Turn Time to Decision by Organization</a>
+                    <a class="dropdown-item" href="#">Application Turn Time to Booking by Organization</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Decision Metrics</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">% Approved, Declined & Withdrawn by Organization</a>
+                    <a class="dropdown-item" href="#">% Approved, Declined & Withdrawn by Industry</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Opportunity Cost</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Delayed Interest by Organization</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Advanced</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Forward Funding</a>
+                    <a class="dropdown-item" href="#">Advanced BPM</a>
+                </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Loan Officer Tools</span>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Show Loaded Views: 0</span>
                 </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Show Private Views: 0</span>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                    <h6 class="dropdown-header">Login Screens:</h6>
-                    <a class="dropdown-item" href="login.html">Login</a>
-                    <a class="dropdown-item" href="register.html">Register</a>
-                    <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">Other Pages:</h6>
-                    <a class="dropdown-item" href="404.html">404 Page</a>
-                    <a class="dropdown-item" href="blank.html">Blank Page</a>
-                </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Manage My Account</span>
+                </a>
+            </li>
+
+
+
+
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
